@@ -5,10 +5,11 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.io.Serializable;
 import java.util.List;
 
 @Entity @Table @Getter @Setter @NoArgsConstructor
-public class University {
+public class University implements Serializable {
     @Id
     @SequenceGenerator(name="university_sequence",sequenceName = "university_sequence",allocationSize = 1)
     @GeneratedValue(

@@ -28,4 +28,9 @@ public class UniversityController {
     public void deleteUniversity(@PathVariable("universityId") Long universityId) {
         universityService.deleteUniversity(universityId);
     }
+
+    @GetMapping(path = "external/{country}")
+    public void getUniversityFromAPI(@PathVariable("country") String country) {
+        universityService.getUniversityFromAPI(country);
+    }
 }
